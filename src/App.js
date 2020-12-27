@@ -16,7 +16,7 @@ function App() {
         <div>개발 Blog</div>
       </div>
       <div className="list">
-        <h3> { 글제목[0] } <span onClick={ ()=>{ 따봉변경(따봉+1) } }>♥</span> {따봉} </h3>
+        <h3> { 글제목[0] } <span onClick={ ()=>{ 따봉변경(따봉+1) } }>👍</span> {따봉} </h3>
         <p>12월 26일 발행</p>
         <hr/>
       </div>
@@ -31,11 +31,24 @@ function App() {
         <hr/>
       </div>
 
-      <button onClick={ ()=>{ modal === true ? modal변경(false) : modal변경(true) } }>버튼</button>
+      {
+        글제목.map((글)=>{
+          return (
+          <div className="list">
+            <h3> { 글 } <span onClick={ ()=>{ 따봉변경(따봉+1) } }>👍</span> {따봉} </h3>
+            <p>12월 26일 발행</p>
+            <hr/>
+          </div>
+          )
+        })
+      }
+
+      <button onClick={ ()=> { modal변경(!modal) } }>버튼</button> 
+      {/* onClick={ ()=>{ modal === true ? modal변경(false) : modal변경(true) } }도 가능함. */}
 
       {
         modal === true
-        ? <Modal></Modal>
+        ? <Modal />
         : null
       }
 

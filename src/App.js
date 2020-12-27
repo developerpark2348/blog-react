@@ -15,21 +15,6 @@ function App() {
       <div className="black-nav">
         <div>개발 Blog</div>
       </div>
-      <div className="list">
-        <h3> { 글제목[0] } <span onClick={ ()=>{ 따봉변경(따봉+1) } }>👍</span> {따봉} </h3>
-        <p>12월 26일 발행</p>
-        <hr/>
-      </div>
-      <div className="list">
-        <h3> { 글제목[1] } </h3>
-        <p>12월 26일 발행</p>
-        <hr/>
-      </div>
-      <div className="list">
-        <h3> { 글제목[2] } </h3>
-        <p>12월 26일 발행</p>
-        <hr/>
-      </div>
 
       {
         글제목.map((글)=>{
@@ -43,7 +28,7 @@ function App() {
         })
       }
 
-      <button onClick={ ()=> { modal변경(!modal) } }>버튼</button> 
+      <button onClick={ ()=> { modal변경(!modal) } }>열고닫기</button> 
       {/* onClick={ ()=>{ modal === true ? modal변경(false) : modal변경(true) } }도 가능함. */}
 
       {
@@ -56,10 +41,11 @@ function App() {
   );
 }
 
-function Modal(){
+//function Modal(아무이름)도 가능하다. 대신 밑에서 부를시 아무이름.가져올state로 사용해야함.
+function Modal(props){
   return (
     <div className="modal">
-        <h2>제목 { 글제목[0] } </h2>
+        <h2>{ props.글제목[1] } </h2>
         <p>날짜</p>
         <p>상세내용</p>
     </div>

@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,7 +9,9 @@ function App() {
   let [따봉, 따봉변경] = useState(0);
   
   function 제목바꾸기(){
-    글제목변경(['여자 코트 추천', 'typescript강의', 'react 강의']);
+    var newArray = [...글제목];
+    newArray[0] = '여자코트 추천';
+    글제목변경 ( newArray );
   }
   
   return (

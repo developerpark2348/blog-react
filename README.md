@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+useState를 처음 사용하여 만든 블로그로서, map함수를 사용하여, 자동화를 이루었으며, input칸에 글의 제목을 입력하면 제목을 글제목state에 넣어 자동으로 출력해주는 블로그를 만들었습니다.
+밑의 button을 클릭하면 삼항연산자를 사용하여 modal창을 닫는 버튼 또한, 만들어 보았습니다.
+
 ## Available Scripts
 
 In the project directory, you can run:
